@@ -1,0 +1,18 @@
+version: "3.6"
+services:
+  gateway:
+    image: "maven:3.8.3-jdk-11"
+    #command: "bash -c \"echo Pass\""
+    command: "bash -c \"mvn clean package\""
+    volumes:
+    - ./gateway:/usr/src/app
+    - $HOME/.m2:/root/.m2
+    working_dir: "/usr/src/app"
+  discounnt:
+    image: "maven:3.8.3-jdk-11"
+    #command: "bash -c \"echo Pass\""
+    command: "bash -c \"mvn clean package\""
+    volumes:
+    - ./discount:/usr/src/app
+    - $HOME/.m2:/root/.m2
+    working_dir: "/usr/src/app"
