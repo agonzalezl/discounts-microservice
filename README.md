@@ -1,7 +1,7 @@
 
 ## How to run it
 
-    docker-com pose -f docker-compose-build.yml up
+    docker-compose -f docker-compose-build.yml up
 
     docker-compose up --build
 
